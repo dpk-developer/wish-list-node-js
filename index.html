@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1>
+        CALL GET API    </h1>
+
+    <button id="btn">
+        Fetch It
+    </button>
+
+    <script>
+        document.getElementById("btn").onclick = async () => {
+            const url = "http://localhost:8080/home";
+            await fetch(url, { mode: 'cors' })
+                .then(res => res.json())
+                .then(response => console.log(response));
+        }
+    </script>
+</body>
+
+</html>
