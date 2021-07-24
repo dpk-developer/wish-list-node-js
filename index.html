@@ -16,7 +16,7 @@
 
     <script>
         document.getElementById("btn").onclick = async () => {
-            const url = "http://localhost:8080/home";
+            const url = "/home";
             await fetch(url, { mode: 'cors' })
                 .then(res => res.json())
                 .then(response => console.log(response));
