@@ -1,5 +1,5 @@
 function deleteItems(item) {
-    const url = "http://localhost:8080/remove/" + item.innerText;
+    const url = "remove/" + item.innerText;
 
     fetch(url, {
         method: "delete",
@@ -13,7 +13,7 @@ function deleteItems(item) {
 
 document.getElementById("myForm").onsubmit = (e) => {
     e.preventDefault();
-    const url = "http://localhost:8080/sent";
+    const url = "/sent";
 
     var data = new URLSearchParams();
     for (const pair of new FormData(e.target)) {
